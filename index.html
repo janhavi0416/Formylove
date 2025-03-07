@@ -5,73 +5,101 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>For My Love ❤️</title>
     <style>
+        @import url('https://fonts.googleapis.com/css2?family=Great+Vibes&family=Poppins:wght@300;400;600&display=swap');
+
         body {
-            font-family: Arial, sans-serif;
+            font-family: 'Poppins', sans-serif;
             text-align: center;
-            background: #f5f5f5;
             margin: 0;
             padding: 0;
+            background: url('https://source.unsplash.com/1600x900/?love,romantic') no-repeat center center/cover;
+            color: white;
         }
         .container {
-            margin: 50px auto;
+            margin: 60px auto;
             width: 80%;
             max-width: 600px;
-            background: white;
-            padding: 20px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-            border-radius: 10px;
+            background: rgba(0, 0, 0, 0.7);
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0px 0px 15px rgba(255, 255, 255, 0.3);
         }
         h1 {
-            color: #ff5733;
+            font-family: 'Great Vibes', cursive;
+            font-size: 36px;
+            color: #ff8c94;
         }
         .quote {
             font-size: 18px;
             font-style: italic;
             margin: 20px 0;
         }
-        .goal-tracker, .love-notes {
+        .goal-tracker, .love-notes, .nicknames, .personal-message {
             margin-top: 20px;
         }
         button {
-            background: #ff5733;
+            background: #ff8c94;
             color: white;
             border: none;
-            padding: 10px 15px;
+            padding: 12px 20px;
             cursor: pointer;
-            font-size: 16px;
-            border-radius: 5px;
+            font-size: 18px;
+            border-radius: 8px;
             margin-top: 10px;
+            transition: 0.3s;
         }
         button:hover {
-            background: #e64a19;
+            background: #ff6570;
+            transform: scale(1.1);
         }
         .message {
             margin-top: 20px;
-            font-size: 16px;
+            font-size: 18px;
             font-weight: bold;
-            color: #333;
+            color: #ffd3da;
+        }
+        .footer {
+            margin-top: 30px;
+            font-size: 14px;
+            opacity: 0.8;
         }
     </style>
 </head>
 <body>
 
     <div class="container">
-        <h1>Hey Love, Stay Motivated! 💪</h1>
+        <h1>Hey Love, Stay Motivated! ❤️</h1>
         <p class="quote">"Success is the sum of small efforts, repeated day in and day out." – Robert Collier</p>
 
         <div class="goal-tracker">
-            <h3>Today's Goal:</h3>
+            <h3>🌟 Today's Goal:</h3>
             <p id="goal-message">Stay focused & work efficiently!</p>
             <button onclick="motivate()">Need More Motivation?</button>
             <p class="message" id="motivation-msg"></p>
         </div>
 
         <div class="love-notes">
-            <h3>Love Note for You ❤️</h3>
+            <h3>💌 Love Note for You</h3>
             <p id="love-note">Click below to see a love note!</p>
             <button onclick="showLoveNote()">Show Love Note</button>
             <p class="message" id="love-message"></p>
         </div>
+
+        <div class="nicknames">
+            <h3>🐻 Your Cute Nickname</h3>
+            <p id="nickname">Click below to see what I love calling you! 😘</p>
+            <button onclick="showNickname()">Show Nickname</button>
+            <p class="message" id="nickname-msg"></p>
+        </div>
+
+        <div class="personal-message">
+            <h3>❤️ A Special Message Just for You</h3>
+            <p id="personal-message">Click below to read my heart! 💖</p>
+            <button onclick="showPersonalMessage()">Show Message</button>
+            <p class="message" id="personal-msg"></p>
+        </div>
+
+        <p class="footer">Made with ❤️ by Janhavi for Pranay</p>
     </div>
 
     <script>
@@ -96,6 +124,32 @@
             ];
             let randomNote = loveNotes[Math.floor(Math.random() * loveNotes.length)];
             document.getElementById("love-message").innerText = randomNote;
+        }
+
+        function showNickname() {
+            const nicknames = [
+                "My Teddy Bear 🧸",
+                "My Sweetheart 💖",
+                "Baby Boo 😘",
+                "Prince Charming 👑",
+                "My Cutie Pie 🍯",
+                "Love of My Life ❤️"
+            ];
+            let randomNickname = nicknames[Math.floor(Math.random() * nicknames.length)];
+            document.getElementById("nickname-msg").innerText = randomNickname;
+        }
+
+        function showPersonalMessage() {
+            const personalMessages = [
+                "You are the reason my world is so beautiful. 💕",
+                "Every second with you is like a dream come true. 😍",
+                "No matter what happens, I will always be by your side. 💖",
+                "Loving you is the best thing I have ever done. 😘",
+                "You are my home, my heart, my everything. ❤️",
+                "Together, we can conquer anything! 🌍🔥"
+            ];
+            let randomPersonalMessage = personalMessages[Math.floor(Math.random() * personalMessages.length)];
+            document.getElementById("personal-msg").innerText = randomPersonalMessage;
         }
     </script>
 
