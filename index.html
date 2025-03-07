@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>For My Love ❤️</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            background: #f5f5f5;
+            margin: 0;
+            padding: 0;
+        }
+        .container {
+            margin: 50px auto;
+            width: 80%;
+            max-width: 600px;
+            background: white;
+            padding: 20px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            border-radius: 10px;
+        }
+        h1 {
+            color: #ff5733;
+        }
+        .quote {
+            font-size: 18px;
+            font-style: italic;
+            margin: 20px 0;
+        }
+        .goal-tracker, .love-notes {
+            margin-top: 20px;
+        }
+        button {
+            background: #ff5733;
+            color: white;
+            border: none;
+            padding: 10px 15px;
+            cursor: pointer;
+            font-size: 16px;
+            border-radius: 5px;
+            margin-top: 10px;
+        }
+        button:hover {
+            background: #e64a19;
+        }
+        .message {
+            margin-top: 20px;
+            font-size: 16px;
+            font-weight: bold;
+            color: #333;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <h1>Hey Love, Stay Motivated! 💪</h1>
+        <p class="quote">"Success is the sum of small efforts, repeated day in and day out." – Robert Collier</p>
+
+        <div class="goal-tracker">
+            <h3>Today's Goal:</h3>
+            <p id="goal-message">Stay focused & work efficiently!</p>
+            <button onclick="motivate()">Need More Motivation?</button>
+            <p class="message" id="motivation-msg"></p>
+        </div>
+
+        <div class="love-notes">
+            <h3>Love Note for You ❤️</h3>
+            <p id="love-note">Click below to see a love note!</p>
+            <button onclick="showLoveNote()">Show Love Note</button>
+            <p class="message" id="love-message"></p>
+        </div>
+    </div>
+
+    <script>
+        function motivate() {
+            const messages = [
+                "You’re capable of amazing things! 🌟",
+                "Every effort counts, keep going! 💪",
+                "Believe in yourself, you got this! 🚀",
+                "Hard work today, success tomorrow! 🔥"
+            ];
+            let randomMessage = messages[Math.floor(Math.random() * messages.length)];
+            document.getElementById("motivation-msg").innerText = randomMessage;
+        }
+
+        function showLoveNote() {
+            const loveNotes = [
+                "My love, you are my greatest inspiration. Keep shining! ✨",
+                "No matter how tough the day is, remember you have my love & support! ❤️",
+                "Every step you take towards success makes me so proud of you! 😘",
+                "You are my king, my love, my everything. Keep conquering the world! 👑",
+                "Work hard, but don’t forget I’m waiting to celebrate your success with you! 🎉"
+            ];
+            let randomNote = loveNotes[Math.floor(Math.random() * loveNotes.length)];
+            document.getElementById("love-message").innerText = randomNote;
+        }
+    </script>
+
+</body>
+</html>
